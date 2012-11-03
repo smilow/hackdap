@@ -2,7 +2,6 @@
 require_once('_config.php');
 
 $page = new page();
-$db->verbose = true;
 $page->organization = new organization();
 $page->disaster = new disaster();
 if (is_numeric($_GET['organization_id'])) {

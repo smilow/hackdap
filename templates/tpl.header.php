@@ -1,9 +1,9 @@
 <?
 
 $this->javascript[] = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js';
-$this->css[] = '/assets/css/bootstrap.min.css';
-$this->css[] = '/assets/css/backgrounds_color.css';
-$this->css[] = '/assets/css/main.css';
+$this->css[] = '/dcweek/assets/css/bootstrap.min.css';
+$this->css[] = '/dcweek/assets/css/backgrounds_color.css';
+$this->css[] = '/dcweek/assets/css/main.css';
 //$this->javascript[] = '/ui/main.js';
 //$this->css[] = '/ui/main.css';
 

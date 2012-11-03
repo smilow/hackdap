@@ -5,6 +5,12 @@ class organization extends dbo {
 		return '/dcweek/organization.php?id='.$this->id;
 	}
 	
+	function get_website() {
+		if ((strpos($this->website, 'http://') === 0) || (strpos($this->website, 'https://') === 0) || ($this->website != '')) 
+			return $this->website;
+		return 'http://'.$this->website;
+	}
+	
 	function get_organization_path() {
 		return $this->get_path();
 	}

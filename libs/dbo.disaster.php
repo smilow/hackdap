@@ -34,5 +34,80 @@ class disaster extends dbo {
 		$disaster = disaster::load_by_query("select * from disasters where id = '".addslashes($id)."' limit 1");;
 		return $disaster;
 	}
-
+	
+	function get_services() {
+		if (!is_array($this->services)) {
+			global $db;
+			$this->services = $db->fetch_list("select distinct name_service from services, services_provided, disasters_organizations where disasters_organizations.disaster_id = '".addslashes($this->id)."' and services.id = services_provided.service_id and disasters_organizations.id = services_provided.disasters_organizations_id order by name_service asc");
+		}
+		return $this->services;
+	}
+	
+	function get_people() {
+		if (!is_array($this->people)) {
+			$this->people = array();
+			global $db;
+			$res = $db->query("select * from people_helping, disasters_organizations where disasters_organizations.disaster_id = '".addslashes($this->id)."' and people_type not in ('Organization Staff') and disasters_organizations.id = people_helping.disasters_organizations_id");
+			while ($row = $db->fetch_array($res)) {
+				$this->people[$row['people_type']] += $row['people_count'];
+			}
+		}
+		return $this->people;
+	}
+	
+	function get_total_people() {
+		if (!isset($this->total_people)) {
+			$this->total_people = array_sum($this->people);
+		}
+		return $this->total_people;
+	}
+	
+	function get_money_spent() {
+		if (!isset($this->spent)) {
+			global $db;
+			$money_entries = $db->fetch_list("select money_spent from disasters_organizations where disaster_id = '".addslashes($this->id)."'");
+			$total_cash = 0;
+			foreach($money_entries as $money) {
+				$parts = explode(' ', $money);
+				foreach($parts as $part) {
+					if (strpos($part, '$') !== false) {
+						$cash = str_replace(array('$', ','), '', $part);
+						$total_cash += $cash;
+						break;
+					}
+				}
+			}
+			$this->spent = $total_cash;
+		}
+		return $this->spent;
+	}
+	
+	function get_burn_rate($disaster_id) {
+		if ($this->get_money_raised() == 0)
+			return 0;
+		return round($this->get_money_spent()/$this->get_money_raised(), 2)*100;
+	}
+	
+	function get_money_raised() {
+		if (!isset($this->raised)) {
+			global $db;
+			$money_entries = $db->fetch_list("select money_raised from disasters_organizations where disaster_id = '".addslashes($this->id)."'");
+			$total_cash = 0;
+			foreach($money_entries as $money) {
+				$parts = explode(' ', $money);
+				foreach($parts as $part) {
+					if (strpos($part, '$') !== false) {
+						$cash = str_replace(array('$', ','), '', $part);
+						$total_cash += $cash;
+						break;
+					}
+				}
+			}
+			$this->raised = $total_cash;
+			if ($this->raised < $this->get_money_spent()) {
+				$this->raised = $this->get_money_spent();
+			}
+		}
+		return $this->raised;
+	}
 }
