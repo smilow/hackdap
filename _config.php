@@ -1,7 +1,7 @@
 <?
-define('DATABASE_USERNAME', 'disastg1_dap');
+define('DATABASE_USERNAME', 'disastg1_dapuser');
 define('DATABASE_PASSWORD', '1q2w3e4r');
-define('DATABASE_NAME', 'disastg1_dapuser');
+define('DATABASE_NAME', 'disastg1_dap');
 define('DATABASE_HOST', 'localhost');
 
 define('PASSWORD_SEED', '49jfiwnf48');

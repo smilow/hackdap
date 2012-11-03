@@ -1,5 +1,0 @@
-<?
-class disaster extends dbo {
-	
-	
-}

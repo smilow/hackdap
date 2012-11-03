@@ -54,8 +54,11 @@ class dbo extends container {
 	}
 
 	static function load_by_query($query) {
+		/* this is a dirty hack because the server is using <v5.3 and i cant use get_called_class() */
+		
 		global $db;
-		$type = get_called_class();
+//		$type = get_called_class();
+		$type = $this->type;
 		if (substr($query, -7, 7) == 'limit 1') {
 			$row = $db->fetch_row($query);
 			$dbo = new $type($row);
