@@ -1,0 +1,240 @@
+// Quickstart main.scss
+// --------------------------------------------------
+
+@import "variables";
+
+
+body { 
+	background-color:$bodyBackground;
+	color:$textColor;
+	font-family:$sansFontFamily; 
+	font-size:$baseFontSize;
+}
+
+.container { 
+	width:$containerWidth;
+	position:relative;
+}
+
+// ------------------------------
+// HEADER
+// ------------------------------
+header { 
+	background-color:$black;
+	color:#fff;
+	display:block;
+	border-bottom: 1px solid white;
+	padding-top:20px;
+	min-height:65px;
+	.pageTitle { 
+		font-family: arial,helvetica,sans-serif;
+		font-size:2.5em;
+		color:#fff;
+		float:left;
+		margin-right: 15px;
+		a { 
+			color:#fff; 
+			text-decoration:none; 
+		}
+		span, span a { 
+			color:$yellow;
+		}
+	}
+	ul li { display:inline; }
+}
+
+h3 { 
+	&.teaser { 
+		font-size: 1.5em;
+		line-height: 1.25em;
+	}
+}
+
+ul.inline-list li { 
+	float:left;
+	margin-right:10px;
+}
+
+#quickNav a, a.button, a.button:visited, a.button:hover, a.button span, #mainNav li:hover a, #mainNav li:hover a:visited, #mainNav li:hover a:hover, #mainNav li:hover a span, #mainNav li:hover span.arrow, #mainNav li.on a, #mainNav li.on a:visited, #mainNav li.on a:hover, #mainNav li.on a span, #mainNav li.on span.arrow, .social_bar li a { 
+	//background:transparent url("../img/sprite_button.png") no-repeat scroll right -300px;	
+}
+
+#quickNav { 
+	display:inline;
+	a { 
+		display:inline-block;
+		text-indent:-10000px;
+		width:27px;
+		height:27px;
+		&.tsunamis { background-position:-103px 3px; }
+		&.fires { background-position:-138px 3px; }
+		&.hurricanes { background-position: -173px 3px; }
+	}
+}
+
+
+nav { 
+	ul li { display:inline; }
+}
+
+#navigation { 
+	background-color:#4C4C4C;
+	padding:15px 0;
+	#mainNav { 
+		margin:0;
+		font-size:0.9em;
+		padding:0;
+		li { 
+			padding-right:10px;
+			&.on a { color:#000; }
+			a {
+				color:#fff;
+				text-transform:uppercase;
+				font-weight:bold;
+					font-size:0.9em;
+					font-family: arial,helvetica,sans-serif;
+				span { 
+					display:block;
+					height:25px;
+					padding-left: 10px;
+				}
+			}
+		}
+	}
+}
+
+#navigationSecondary { 
+	border-bottom:1px solid #CDCDCD;
+	margin-bottom:1px;
+	min-height:40px;
+	ul { margin:0; }
+	a {  font-size:0.9em; }
+}
+
+#donate { 
+	float:right;
+	position:absolute;
+	right:0;
+	top:0;
+	a.button, a.button:visited, a.button:hover { 
+		font-family:$sansFontFamily; 
+		background-position: right -139px;
+		color:#000;
+		display:block;
+		font-size:1.5em;
+		font-weight:bold;
+		height:33px;
+		line-height:33px;
+		padding-right:10px;
+		text-decoration: none;
+		text-transform: uppercase;
+		span { 
+			background-position: left -106px;
+			display:block;
+			padding-left:10px;
+		}
+	}
+}
+
+// ------------------------------
+// FOOTER 
+// ------------------------------
+footer { 
+	background-color:$black;
+	padding-top:1em;
+	#footer { 
+		h5, ul {
+			font-size:0.85em;
+		}
+		.social_bar { 
+			li { 
+				font-size:0.8em; 
+				margin-bottom:4px; 
+			}
+		}
+	}
+	ul { 
+		margin:0; 
+		li { 
+			list-style: none;
+		}
+	}
+}
+
+.row { 
+	.column {
+		display: inline;
+		float: left;
+		margin:0 5px;
+		position: relative;
+		&.one-half { 
+			width:126px;
+		}
+		&.two { 
+			width:170px;
+			&.social { width:144px; }
+			&.mailingList { width:196px; }
+		}
+		&.four { 
+			width:350px;
+		}
+	}
+}
+
+#command {
+	input.textField { 
+		height:14px;
+	}
+	label.textField { 
+		font-size:0.8em;
+		color:#fff;
+	}
+}
+#connect-DAP { 
+	border-bottom:1px solid #000;
+	.column div {
+		border-right:1px solid #515151;
+		height:110px;
+		padding-top: 5px;
+	}
+	#report_issue.column div {
+		border:none;
+	}
+}
+#additional_links { 
+	border-top:1px solid #444;
+}
+
+
+// ------------------------------
+// MISC
+// ------------------------------
+.relative { position:relative !important; }
+.border-none { border:none !important; }
+
+
+// Utils
+// -------------------------
+.show-grid {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.show-grid [class*="span"] {
+  background-color: #eee;
+  text-align: center;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  min-height: 30px;
+  line-height: 30px;
+}
+.show-grid:hover [class*="span"] {
+  background: #ddd;
+}
+.show-grid .show-grid {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.show-grid .show-grid [class*="span"] {
+  background-color: #ccc;
+}

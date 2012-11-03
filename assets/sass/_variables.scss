@@ -1,0 +1,39 @@
+//
+// Variables
+// --------------------------------------------------
+
+$black:					#262626 !default;
+$yellow:				#FFF117 !default;
+
+// Scaffolding
+// -------------------------
+$bodyBackground:        #fff !default;
+$textColor:             #333 !default;
+
+
+// Links
+// -------------------------
+$linkColor:             #08c !default;
+$linkColorHover:        darken($linkColor, 15%) !default;
+
+
+// Typography
+// -------------------------
+$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$baseFontSize:          14px !default;
+$baseFontFamily:        $sansFontFamily !default;
+$baseLineHeight:        20px !default;
+
+
+$containerWidth:		1000px !default;
+
+
+
+
+// MEDIA QUERIES
+// --------------------------------------------------
+$largeDesktopSize:          1200px !default;
+$defaultDesktopSize:        980px !default;
+$portraitTabletSize:        768px !default;
+$phoneSize:           		480px !default;

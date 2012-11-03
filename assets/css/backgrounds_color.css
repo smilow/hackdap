@@ -1,0 +1,915 @@
+@font-face{  
+  font-family:TradeGothic;  
+  src: url(../fonts/TradeGothicLTStd.eot); /* IE */  
+  src:local("TradeGothicLTStd"), url(../fonts/TradeGothicLTStd.otf) format("truetype");  
+} 
+
+@font-face{  
+  font-family:TradeGothicBold; 
+  src: url(../fonts/TradeGothicLTStd-Bold.eot);
+  src:local("TradeGothicLTStd-Bold"), url(../fonts/TradeGothicLTStd-Bold.otf) format("truetype");  
+} 
+
+@font-face{  
+  font-family:TradeGothicThin;
+  src: url(../fonts/TradeGothicLTStd-Light.eot);
+  src:local("TradeGothicLTStd-Light"), url(../fonts/TradeGothicLTStd-Light.otf) format("truetype");  
+} 
+
+@font-face{  
+  font-family:TradeGothicBoldCond20;  
+  src: url(../fonts/tradegothicltstd-bdcn20-webfont.eot);
+  src:local("TradeGothicLTStd-BdCn20"), url(../fonts/TradeGothicLTStd-BdCn20.otf) format("truetype");  
+} 
+
+@font-face{  
+  font-family:TradeGothicBoldTwo; 
+  src: url(../fonts/tradegothicltstd-bd2-webfont.eot);
+  src:local("TradeGothicLTStd-Bd2"), url(../fonts/TradeGothicLTStd-Bd2.otf) format("truetype");  
+} 
+
+@font-face{  
+  font-family:TradeGothicCond18;
+  src: url(../fonts/tradegothicltstd-cn18-webfont.eot);
+  src:local("TradeGothicLTStd-Cn18.otf"), url(../fonts/TradeGothicLTStd-Cn18.otf) format("truetype");  
+} 
+
+body{
+	background-color:#ffffff;
+	background-image:url(../img/bkgds/body.png);
+	background-repeat:repeat-x;
+	background-position:left bottom;
+	color:#ffffff;
+	font-family:TradeGothic,arial,helvetica, sans-serif;
+	font-size:62.5%;
+}
+
+
+#header{
+	background-color:#262626;
+	border-bottom: 1px solid white;
+}
+
+#header p.pageTitle {
+	font-size:3.2em;
+	font-family:TradeGothicCond18,arial,helvetica, sans-serif;
+}
+
+#header p.pageTitle a{
+	text-decoration:none;
+        color:#ffffff;
+}
+
+#header p.pageTitle span,
+#header p.pageTitle span a{
+	color:#FFF117;
+}
+
+#navigation{
+	background-color:#4C4C4C;
+}
+
+.promoText{
+	background-color:#FFF117;
+}
+
+.promoText h1{
+	font-size:5em;
+	text-transform:uppercase;
+	margin-bottom:15px;
+}
+
+.promoText h1{
+	font-family:TradeGothicBoldCond20,arial;
+}
+
+#promo a.button.arrow{
+	font-family:TradeGothicBoldTwo,arial;
+}
+
+.promoText p{
+	line-height:24px;
+	font-size:1.7em;
+	font-family:TradeGothic,arial;
+}
+
+.sid-2 .promoText p{
+	font-size:1.5em;
+}
+
+#promo a.button.arrow{
+	color:#ffffff;
+	font-size:.8em;
+	text-transform:uppercase;
+	background-position:right bottom;
+	font-weight:normal;
+	width:auto;
+	float:right;
+	
+}
+
+#promo a.button.arrow span{
+	background-position:left -475px;
+	padding-right:6px;
+}
+
+#promo p.button.arrow{
+	margin:20px 0 0 0;
+	padding-bottom:20px;
+}
+
+#contentWrapper{
+	background-color:#262626;
+}
+
+#content{
+	font-family:arial;
+}
+
+#content h1{
+	font-family:TradeGothicCond18,Arial;
+	font-size:4em;
+	text-transform:uppercase;
+}
+
+
+#content h1,
+#content .division{
+	background-image:url(../img/bkgds/hr.png);
+	background-repeat:repeat-x;
+	background-position:left bottom;
+	padding-bottom:20px;
+	margin-bottom:10px;
+}
+#content p{
+	font-size:1.3em;
+	line-height:20px;
+	margin-bottom:20px;
+}
+
+#content p.intro{
+	font-size:1.6em;
+	line-height:25px;
+}
+#content p.intro.noted{
+	color:#17c2ff;
+}
+
+#content dl{
+	font-size:1.2em;
+}
+
+#content dl dt{
+	font-style:italic;
+	float:left;
+	margin-right:5px;
+}
+
+#content dl dd{
+	margin-bottom:10px;
+}
+
+#content dl dd,
+#content dl dt{
+	line-height:20px;
+}
+
+a.more,
+a.more:visited,
+a.more:hover,
+#content p a.more,
+#content p a.more:visited,
+#content p a.more:hover,
+#content dl dd a,
+#content dl dd a:visited,
+#content dl dd a:hover{
+	color:#17C2FF !important;
+	text-decoration:underline;
+	margin-left:8px;
+}
+
+#content p a.more,
+#content p a.more:visited,
+#content p a.more:hover{
+	display:block;
+    line-height:30px;
+	margin-bottom:25px;
+	margin-left:0;
+}
+
+a.more:after,
+#content p a.more:after,
+#content dl dd a:after{
+	content:" >";
+}
+
+#content ul.normal.disc{
+   list-style-type:circle;
+}
+#content ul.normal.disc{
+   margin-left:30px;
+}
+
+#content ul.normal li{
+    margin-bottom:10px;
+	line-height:15px;
+	font-size:1.2em;
+}
+
+#content ul.normal li a{
+    font-size:1.2em;
+    color:#ffffff;
+}
+
+#content ul.normal li a.more{
+    font-size:1em;
+}
+#content #subscribe {
+	float: right;
+}
+#content div#subscribe a,
+#content div#subscribe a:visited {
+	color: #ede11c;
+	text-decoration: none;
+}
+#quickNav a,
+a.button,
+a.button:visited,
+a.button:hover,
+a.button span,
+#mainNav li:hover a,
+#mainNav li:hover a:visited,
+#mainNav li:hover a:hover,
+#mainNav li:hover a span,
+#mainNav li:hover span.arrow,
+#mainNav li.on a,
+#mainNav li.on a:visited,
+#mainNav li.on a:hover,
+#mainNav li.on a span,
+#mainNav li.on span.arrow,
+.social_bar li a{
+	background-image:  url("../img/sprite_button.png");
+	background-repeat:no-repeat;
+}
+
+#quickNav{
+	margin-top:4px;
+}
+
+#quickNav a{
+	text-indent:-10000px;
+	display:inline-block;
+	width:27px;
+	height:27px;
+	/*sprite*/
+	background-position:-69px 3px;
+}
+
+#quickNav a.tsunamis{
+	background-position:-103px 3px;
+}
+
+#quickNav a.fires{
+	background-position:-138px 3px;
+}
+
+#quickNav a.hurricanes{
+	background-position:-173px 3px;
+}
+
+ 
+
+a.button,
+a.button:visited,
+a.button:hover{
+	text-transform:uppercase;
+	color:#000000;
+	font-weight:bold;
+	font-size:1.4em;
+	font-family:TradeGothicBoldTwo;
+	display:block;
+	height:33px;
+	line-height:33px;
+	padding-right:10px;
+	text-decoration:none;
+	/*sprite*/
+	background-position:right -139px;
+}
+
+a.button:hover{
+	background-position:right -242px;
+}
+
+a.button.arrow,
+a.button.arrow:visited,
+a.button.arrow:hover{
+	/*sprite*/
+	background-position:right bottom;
+	height:24px;
+	padding-right:20px;
+	line-height:25px;
+}
+
+a.button.arrow.gray,
+a.button.arrow.gray:visited,
+a.button.arrow.gray:hover{
+	/*sprite*/
+	background-position:right -398px;
+	width:170px;
+}
+
+#content a.button.arrow.blue,
+#content a.button.arrow.blue:visited,
+#content a.button.arrow.blue:hover{
+	font-size:1em;
+}
+
+#content #right-rail a.button.arrow,
+#content #right-rail a.button.arrow:visited,
+#content #right-rail a.button.arrow:hover{
+	font-size:1.2em;
+}
+
+a.button.arrow.blue,
+a.button.arrow.blue:visited,
+a.button.arrow.blue:hover{
+	/*sprite*/
+	background-position:right -446px;
+	width:170px;
+}
+
+a.button.arrow.blue span,
+a.button.arrow.blue:visited span,
+a.button.arrow.blue:hover span{
+	/*sprite*/
+	background-position:left -218px;
+}
+
+a.button span{
+	/*sprite*/
+	background-position:left -106px;
+	display: block;
+    padding-left:10px;
+}
+
+a.button:hover span{
+	/*sprite*/
+	background-position:left -210px;
+}
+
+a.button.arrow span{
+	/*sprite*/
+	background-position:left bottom;
+	height:24px;
+}
+
+a.button.arrow.gray span{
+	/*sprite*/
+	background-position:left -374px;
+}
+
+#right-rail a.button{
+	width:90%;
+}
+
+#mainNav{
+	padding:12px 0 0 18px;
+}
+
+#mainNav li:hover,
+#mainNav li.on{
+	/*background-color:#EDE11C;*/
+	
+}
+
+#mainNav li:hover a,
+#mainNav li:hover a:visited,
+#mainNav li:hover a:hover,
+#mainNav li.on a,
+#mainNav li.on a:visited,
+#mainNav li.on a:hover{
+	color:#262626;
+	/*sprite*/
+	background-position:right -300px;
+}
+
+#mainNav li a,
+#mainNav li a:visited,
+#mainNav li a:hover{
+	color:#ffffff;
+	font-size:1.2em;
+	text-decoration:none;
+	text-transform:uppercase;
+	padding-right:10px;
+	display:inline-block;
+	line-height:25px;
+	background-color:transparent;
+	padding-right:10px;
+	font-family:TradeGothicBoldTwo;
+}
+
+
+#mainNav li:hover a span,
+#mainNav li.on a span{
+	/*sprite*/
+	background-position:left -275px;
+}
+
+#mainNav li a span{
+	height:25px;
+	display:block;
+    padding-left:10px;
+}
+
+#mainNav li{
+	position:relative;
+}
+
+#mainNav li:hover span.arrow,
+#mainNav li.on span.arrow{
+	/*sprite*/
+	background-position:left top;
+	width:13px;
+	height:7px;
+	display:block;
+	position:absolute;
+	bottom:-5px;
+	left:45%;
+}
+
+#secondaryNav{
+	margin:0 0 0 20px;
+}
+
+#secondaryNav li{
+	line-height:39px;
+	margin-right:15px;
+}
+
+#secondaryNav a,
+#secondaryNav a:visited,
+#secondaryNav a:hover{
+	color:#333333;
+	text-decoration:none;
+	font-size:1.3em;
+	border-right:1px solid #333333;
+	padding-right:15px;
+	font-family:arial;
+}
+
+#secondaryNav li:last-child a{
+	border-right:none;
+}
+
+#secondaryNav li.on a,
+#secondaryNav li a.on,
+#secondaryNav a:hover{
+	text-decoration:underline;
+}
+
+/*content*/
+#content h2{
+	line-height:40px;
+	background-color:#FFF117;
+	color:#000000;
+	/*text-transform:capitalize;*/
+	font-size:2.4em;
+	padding:0 10px;
+	display:inline-block;
+	min-width:400px;
+	font-family:TradeGothicCond18,Arial;
+}
+
+#content h2 a{
+	text-decoration:none;
+	color:black;	
+}
+
+#content h2.small{
+	font-size:2.2em;
+}
+#content p.reportDate{
+	color:#ffffff;
+	text-transform:uppercase;
+	font-size:1.4em;
+	margin-bottom:1px;
+	font-style:TradeGothicThin,arial
+}
+
+#content ol{
+	font-size:1.2em;
+	line-height:20px;
+	list-style-type:decimal;
+	margin-left:30px;
+	margin-bottom:30px;
+}
+
+#content ol li{
+	font-size:1.2em;
+	line-height:20px;
+	list-style-type:decimal;
+	margin-bottom:10px;
+}
+
+#content .inline-promo{
+	font-family:TradeGothicBoldTwo,Arial;
+	font-weight:bold;
+	text-transform:uppercase;
+	margin-bottom:60px;
+}
+
+
+#content .inline-promo h3{
+	color:#17C2FF;
+	text-align:right;
+	font-size:1.4em;
+	display:inline-block;
+	width:95px;
+	float:left;
+}
+
+#content .inline-promo h3,
+#content .inline-promo ul li{
+	border-right:1px solid #939393;
+	padding:5px 15px 3px 0;
+	margin-right:10px;
+	height:45px;
+}
+
+#content .inline-promo ul li{
+	display:inline-block;
+}
+
+#content .inline-promo ul li a{
+	color:#FFFFFF;
+	text-decoration:none;
+	font-size:1.3em;
+	display:inline-block;
+	padding-top:35px;
+	width: 114px;
+	overflow: hidden;
+}
+
+/*footer*/
+h3.teaser{
+	color:#17C2FF;
+	font-size:3em;
+	line-height:30px;
+	font-family:TradeGothicCond18,arial;
+	padding-right:43px;
+}
+
+#footer h5{
+	text-transform:uppercase;
+}
+
+/*#footer .whyAccountability h5,
+#footer .whyAccountability a,
+#footer .whyAccountability a:visited,
+#footer .whyAccountability a:hover{
+	color:#17C2FF;
+	text-decoration:underline;
+}*/
+
+#footer .whyAccountability h5,
+#footer .whyAccountability a,
+#footer .whyAccountability a:visited,
+#footer .whyAccountability a:hover{
+	color:#ffffff;
+	text-decoration:none;
+}
+
+#footer h5,
+#footer ul{
+	font-size:1.1em;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#footer ul li{
+	font-size:1em;
+}
+
+#footer ul li{
+	margin-bottom:7px;
+}
+
+#footer ul li a,
+#footer ul li a:visited,
+#footer ul li a:hover{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+#command label.textField{
+	text-transform:uppercase;
+	font-size:1.2em;
+	line-height:20px;
+}
+
+#command label.textField span{
+	display:block;
+	margin-bottom:10px;
+}
+
+#command label.submit{
+	position:absolute;
+	left:-10000px;
+	display:block;
+}
+
+#command input.submit{
+	background-image:  url("../img/submit_arrow.png");
+	background-repeat:no-repeat;
+	border:1px solid white;
+	width:25px;
+	height:24px;
+	display:inline-block;
+	position: absolute;
+	right:14px;
+	top:5px;
+	cursor:pointer;
+}
+
+#command input.textField{
+	height:17px;
+	width:153px;
+	padding-top:4px;
+	border:1px solid white;
+	font-size:1.1em;
+}
+
+#report_issue{
+	text-align:center;
+	background-image:url("../img/beacon_small.png");
+	background-repeat:no-repeat;
+	background-position:50% top;
+	padding-top:35px;
+}
+
+#report_issue p{
+	font-size:1.4em;
+	font-family:TradeGthicBold,arial;
+	font-weight:bold;
+	text-transform:uppercase;
+	line-height:20px;
+}
+
+#report_issue p span{
+	display:block;
+}
+
+
+
+
+div.column.two.social_bar{
+	width:144px;
+}
+
+div.column.two.mailingList{
+	width:196px;
+}
+
+ul.social_bar{
+	margin-left:5px;
+}
+
+.social_bar li{
+	line-height:28px;
+}
+
+.social_bar li a{
+	font-family:TradeGothicBoldTwo,arial;
+	font-size:1.2em;
+	text-transform:uppercase;
+	/*sprite*/
+	background-repeat:no-repeat;
+	padding-left:32px;
+	text-decoration:none;
+}
+
+
+
+.social_bar li a,
+#report_issue p a{
+	font-family:TradeGothicBoldTwo,arial;
+	text-transform:uppercase;
+	/*sprite*/
+	text-decoration:none;
+}
+
+#report_issue p a{
+	color:#FFFFFF;
+	font-size:1em;
+	line-height:16px;
+}
+
+.social_bar li.email a{
+	background-position:-277px 3px;
+}
+
+.social_bar li.facebook a{
+	background-position:-277px -30px;
+
+}
+
+.social_bar li.twitter a{
+	background-position:-277px -65px;
+}
+
+.module.page-profiles{
+	border-bottom:3px solid #ffffff;
+}
+
+.row.module.page-profiles .column.three{
+	width:298px;
+	height:295px;
+	margin:0;
+	border-right:3px solid #ffffff;
+}
+
+.row.module.page-profiles .column.three.last{
+	border-right:none;
+}
+
+.module.page-profiles .module-container{
+	padding:0;
+	background-image:url(../img/sprite_section_promos.png);
+	background-repeat:no-repeat;
+}
+
+.module.page-profiles .module-container.get-involved{
+	background-position:-300px -7px;
+}
+
+.module.page-profiles .module-container.haiti-1year-later{
+	background-position:right top;
+}
+
+#content .module.page-profiles .module-container .division{
+	height:88px;
+        padding-bottom:0;
+        margin-bottom:20px;
+}
+
+.module.page-profiles .module-container h2{
+	margin-left:20px;
+	margin-bottom:15px;
+}
+
+.module.page-profiles .module-container p{
+	padding:0 20px;
+	margin-bottom:10px;
+}
+
+#content .module.page-profiles h2{
+	line-height:20px;
+	background-color:transparent;
+	color:#17C1FE;
+	font-family:TradeGothicCond18;
+	font-size:2.2em;
+	padding:0;
+	display:block;
+	min-width:0;
+	text-transform:uppercase;
+}
+
+#content .module.page-profiles .odd h2,
+#content .module.page-profiles .odd a.more{
+	color:#FFF017 !important;
+}
+
+#content .module.page-profiles h2 span{
+	color:#ffffff;
+}
+
+#extraContent{
+	background-color:#404040;
+	padding:10px 0 30px 5px;
+}
+
+#extraContent .container{
+        padding-right:40px;
+}
+
+#extraContent h2{
+	background-color:#262626;
+	color:#FFFFFF;
+	font-size:2.2em;
+    min-width:390px;
+    padding-right:0;
+	font-family:TradeGothicCond18;
+}
+
+#extraContent h2 a,
+#extraContent h2 a:visited,
+#extraContent h2 a:hover{
+	color:#FFFFFF;
+}
+
+#hotline{
+	padding-top:25px;
+	background-image:url(../img/beacon.png);
+	background-repeat:no-repeat;
+	background-position:10px top;
+}
+
+#hotline h3,
+#hotline p{
+	padding-left:70px;
+}
+
+#hotline h3{
+	font-size:2.2em;
+	text-transform:uppercase;
+	font-weight:bold;
+	font-family:TradeGothicCond18;
+	margin-bottom:10px;
+}
+
+
+.help-icons{
+	text-align:center;
+	background-image:url("../img/sprite_help_icons.png");
+	background-repeat:no-repeat;
+	background-position:50% top;
+}
+
+.help-icons.hotline{
+	background-position:50% -82px;
+}
+
+.help-icons.citizen-engagement{
+	background-position:50% -163px;
+}
+
+.help-icons.citizen-wiki{
+	background-position:50% top;
+}
+
+.help-icons a{
+	font-family:TradeGothicBoldTwo,Arial;
+}
+
+.inline-links a,
+.inline-links a:visited{
+	color:#ffffff;
+}
+
+
+
+
+
+
+/*beginning of Pat's code for sub navigation bar*/
+
+
+div#additional_links .whatWeDo h5, 
+div#additional_links .whatWeDo a, 
+div#additional_links .whatWeDo a:visited, 
+div#additional_links .whatWeDo a:hover {
+        color:#ffffff;
+        text-decoration: none;
+}
+
+div#additional_links .getInvolved h5, 
+div#additional_links .getInvolved a, 
+div#additional_links .getInvolved a:visited, 
+div#additional_links .getInvolved a:hover {
+        color:#ffffff;
+        text-decoration: none;
+}
+
+div#additional_links .newsMedia h5, 
+div#additional_links .newsMedia a, 
+div#additional_links .newsMedia a:visited, 
+div#additional_links .newsMedia a:hover {
+        color:#ffffff;
+        text-decoration: none;
+}
+
+div#additional_links .aboutUs h5, 
+div#additional_links .aboutUs a, 
+div#additional_links .aboutUs a:visited, 
+div#additional_links .aboutUs a:hover {
+        color:#ffffff;
+        text-decoration: none;
+}
+
+div#additional_links .projects h5, 
+div#additional_links .projects a, 
+div#additional_links .projects a:visited, 
+div#additional_links .projects a:hover {
+        color:#ffffff;
+        text-decoration: none;
+}
+
+div#additional_links .blog h5, 
+div#additional_links .blog a, 
+div#additional_links .blog a:visited, 
+div#additional_links .blog a:hover {
+        color:#ffffff;
+        text-decoration: none;
+}
+
+
+/*End of Pat's new code*/
