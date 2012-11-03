@@ -1,3 +1,9 @@
+<div id="mainContent">
+	<div class="container">
+		<!-- main content start -->
+		
+		<div class="row-fluid">
+			<div class="span12">
 <?
 echo('
 	<h1>'.$this->disaster->name_disaster.'</h1>
@@ -40,3 +46,11 @@ foreach($this->organizations as $organization) {
 }
 
 echo('</table>');
+?>
+				
+			</div>
+		</div>
+
+		
+	</div><!-- main content end -->
+</div>
