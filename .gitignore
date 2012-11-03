@@ -28,3 +28,4 @@ pip-log.txt
 
 .DS_Store
 .sass-cache
+error_log

@@ -1,6 +1,9 @@
 <?
 
 $this->javascript[] = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js';
+$this->css[] = '/assets/css/bootstrap.min.css';
+$this->css[] = '/assets/css/backgrounds_color.css';
+$this->css[] = '/assets/css/main.css';
 //$this->javascript[] = '/ui/main.js';
 //$this->css[] = '/ui/main.css';
 
@@ -9,10 +12,6 @@ $this->meta();
 $this->css();
 echo('</head><body><noscript>'.SITE_NAME.' works best with javascript and cookies.</noscript>');
 ?>
-<link rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="../assets/css/backgrounds_color.css"/>
-<link rel="stylesheet" href="../assets/css/main.css"/>
-
 <header>
 <div class="container">
 <div id="logo">
