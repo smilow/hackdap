@@ -25,7 +25,8 @@ echo('</head><body><noscript>'.SITE_NAME.' works best with javascript and cookie
 </ul>
 </div>
 <div id="donate">
-<a href="get-involved/donate.html" class="button"><span>Make a Donation</span></a>
+<a href="/dcweek/donate.php" class="button"><span>Make a Donation</span></a> 
+
 </div>
 </div>
 </header>
@@ -50,6 +51,8 @@ echo('</head><body><noscript>'.SITE_NAME.' works best with javascript and cookie
 <li><a title="Disaster Policy Wiki" href="what-we-do/policy.html">Disaster Policy Wiki</a></li>
 <li><a title="Real-Time Hotline" href="what-we-do/real-time-hotline.html">Real-Time Hotline</a></li>
 <li class="last"><a title="Citizen Engagement" href="what-we-do/citizen-engagement.html">Citizen Engagement</a></li>
+<li><a href="/dcweek/landing-email.php"><span>Subscribe to Newsletter</span></a></li>
+<li><a href="/dcweek/disaster.php"><span>Disasters</span></a></li>
 </ul>
 </ul>
 </div>
