@@ -2,6 +2,10 @@
 class subscriber extends dbo {
 	
 	function validates() {
+		if ((strpos($this->email_address, '@') !== false) || (strlen($this->email_address) < 6))
+			$this->errors[] = 'Invalid email address';
+		if (count($this->errors) > 0)
+			return false;
 		return true;
 	}
 	
