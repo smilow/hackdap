@@ -16,7 +16,7 @@ echo('</head><body><noscript>'.SITE_NAME.' works best with javascript and cookie
 <header>
 <div class="container">
 <div id="logo">
-<p class="pageTitle"><a href="/"><span>SmartResponse</span>.org</a></p>
+<p class="pageTitle"><a href="/dcweek/"><span>SmartResponse</span>.org</a></p>
 <ul class="inline-list" id="quickNav">
 <li><a href="/" class="earthquakes">earthquakes</a></li>
 <li><a href="/" class="tsunamis">tsunamis</a></li>
