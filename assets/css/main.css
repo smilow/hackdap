@@ -42,6 +42,35 @@ body {
   font-size: 14px;
 }
 
+.landing-page { 
+	background:url(../img/bg.jpg) center 65%;
+	height:600px;
+	position:relative;
+}
+
+.landing-page .box-wrapper { 
+	background: rgba(0,0,0, 0.7);
+	padding:2em;
+	border-radius:5px; 
+	margin:auto;
+	position: absolute;
+	top:100px;
+	left:34%;
+	color:#fff;
+	text-align:center;
+}
+.landing-page .box-wrapper table { 
+	text-align: left;
+	margin-bottom:10px;
+	color:#fff;
+}
+.landing-page .box-wrapper td:first-child { 
+	width:120px;
+}
+.landing-page .box-wrapper .btn { 
+	margin-top:10px;
+	width:100%;
+}
 .container {
   width: 1000px;
   position: relative;
@@ -135,7 +164,7 @@ nav ul li {
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 0.9em;
+  font-size: 1em;
   font-family: arial,helvetica,sans-serif;
 }
 #navigation #mainNav li a:hover {
@@ -156,7 +185,7 @@ nav ul li {
   margin: 0;
 }
 #navigationSecondary a, #navigationSecondary a:hover {
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 #donate {
@@ -189,7 +218,7 @@ nav ul li {
   padding: 25px 0 30px;
 }
 #mainContent h1 {
-  font-size:3.25em;
+  font-size:3em;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -225,7 +254,7 @@ nav ul li {
 .sprite-icon {
   background-image: url(../img/sprite-icons.png);
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: -30px -96px;
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -350,11 +379,14 @@ nav ul li {
 #organization-stats li { 
 	color:#666;
 	line-height:28px;
+	font-weight: bold;
 }
 #organization-stats ul li span {
-  font-weight: bold;
-  margin-left: 10px;
+  font-weight: normal;
+  margin-bottom: 15px;
   color:#333;
+  display:block;
+  line-height:1.25em;
 }
 #organization-stats .partner-org ul {
 	margin:0 0 15px 15px;
@@ -363,7 +395,7 @@ nav ul li {
 	line-height:20px;
 }
 .organization_contact_info { 
-	margin:15px 0;
+	margin:25px 0;
 }
 .organization_contact_info address { 
 	display:block;
@@ -417,7 +449,6 @@ footer {
   padding: 1em 0;
 }
 footer #footer h5, footer #footer ul {
-  font-size: 0.75em;
 }
 footer #footer ul{
 	  border-top: 1px solid #444;
@@ -440,9 +471,6 @@ footer #footer ul.social_bar{
 footer h3.teaser{
 	font-weight: normal;
 	font-size: 2em;
-}
-footer .mailingList label{
-	line-height: 1em;
 }
 footer ul {
   margin: 0;
@@ -513,7 +541,12 @@ footer #footer h5 a{
   border-top: 1px solid #444;
   margin-left: 0;
 }
-
+#additional_links ul { 
+	font-size: 0.9em;
+}
+#additional_links h5 { 
+	font-size: 0.80em;
+}
 .relative {
   position: relative !important;
 }

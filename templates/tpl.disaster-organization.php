@@ -50,21 +50,26 @@ echo('
 					<ul>
 						'.($this->relief->crisis_mission != '' ? '<li>Crisis Mission: <span>'.$this->relief->crisis_mission.'</li>' : '').'
 						'.($this->relief->money_spent != '' ? '<li>Money Spent: <span>'.$this->relief->money_spent.'</li>' : '').'
-						'.($this->relief->onground_ops != '' ? '<li>On-the-ground-operations: <span>'.$this->relief->onground_ops.'</li>' : '').'
+						'.($this->relief->onground_ops != '' ? '<li>Staff on Ground: <span>'.$this->relief->onground_ops.'</li>' : '').'
 						'.($this->relief->response_start_date != '' ? '<li>Response Start Date: <span>'.$this->relief->response_start_date.'</li>' : '').'
 						'.($this->relief->response_end_date != '' ? '<li>Response End Date: <span>'.$this->relief->response_end_date.'</li>' : '').'
 						'.(!in_array($this->relief->donation_interest_raised, array('', 'NR', 'N/A', 'N/A at this time.', 'No Response')) ? '<li>Interest raised on donations: <span>'.$this->relief->donation_interest_raised.'</li>' : '').'
 						'.(!in_array($this->relief->interest_allocation, array('', 'NR', 'N/A', 'N/A at this time.', 'No Response')) ? '<li>Interest Allocation: <span>'.$this->relief->interest_allocation.'</li>' : '').'
 						'.($this->relief->locally_hired_staff != '' ? '<li>Locally Hired Staff: <span>'.$this->relief->locally_hired_staff.'</li>' : '').'
 						'.($this->relief->expected_outcomes != '' ? '<li>Expected Outcomes: <span>'.$this->relief->expected_outcomes.'</li>' : '').'
-						'.($this->relief->benchmark_achievements != '' ? '<li>Benchmark achievements: <span>'.$this->relief->benchmark_achievements.'</li>' : '').'
-						'.($this->relief->strengths_weaknesses != '' ? '<li>Strengths and weaknesses: <span>'.$this->relief->strengths_weaknesses.'</li>' : '').'
-						'.($this->relief->reported_collaborations != '' ? '<li>Reported Collaborations: <span>'.$this->relief->reported_collaborations.'</li>' : '').'
-						'.($this->relief->disaster_contact_info != '' ? '<li>Contact Information for articular disaster: <span>'.str_replace('@', ' at ', $this->relief->disaster_contact_info).'</li>' : '').'
+						'.($this->relief->benchmark_achievements != '' ? '<li>Achievements: <span>'.$this->relief->benchmark_achievements.'</li>' : '').'
+						'.($this->relief->reported_collaborations != '' ? '<li>Collaborations: <span>'.$this->relief->reported_collaborations.'</li>' : '').'
+						'.($this->relief->disaster_contact_info != '' ? '<li>Contact Information for particular disaster: <span>'.str_replace('@', ' at ', $this->relief->disaster_contact_info).'</li>' : '').'
 						'.($this->relief->govt_registration > 0 ? '<li>Registered with government: <span>'.$this->relief->govt_registration.'</li>' : '').'
 						
 ');
+
 /*
+ * soliciting donations
+ * operation in location
+ * history in crisis location
+ * 
+						'.($this->relief->strengths_weaknesses != '' ? '<li>Strengths and weaknesses: <span>'.$this->relief->strengths_weaknesses.'</li>' : '').'
 						'.($this->disaster->money_spent != '' ? '<li>Operating in Crisis Location Since: <span>'.$this->disaster->crisis_mission.'</li>' : '').'
 						'.($this->disaster->crisis_mission != '' ? '<li>History in Crisis Location: <span>'.$this->disaster->crisis_mission.'</li>' : '').'
 						<li class="partner-org">Dollars Shared with Partner Organizations: 
@@ -90,6 +95,12 @@ echo('
 					</div>
 					<div class="organization_contact_info">
 ');
+/*
+ * ein
+ * fiscal year
+ * guidestar url
+ * charity navigator url
+ */
 if (($this->organization->email_organization != '') || ($this->organization->phone_no_organization > 0) || (strlen($this->organization->get_website() > 8))) {
 	echo('
 							<b>HQ Contact Information:</b>

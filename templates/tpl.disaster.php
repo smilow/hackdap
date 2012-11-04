@@ -74,8 +74,11 @@ foreach($this->organizations as $organization) {
 		echo('</ul>');
 	}
 	echo('</td><td>');
+	$i = 0;
 	foreach($organization->get_services_in_disaster($this->disaster->id) as $service) {
-		echo('<span class="'.str::slug($service).'">'.$service.'</span> ');
+		if ($i++ > 0)
+			echo(', ');
+		echo('<span class="'.str::slug($service).'">'.$service.'</span>');
 	}
 	echo('</td>
 		</tr>
