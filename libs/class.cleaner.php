@@ -261,47 +261,6 @@ function strip_to_single_spaces($string) {
 	return $string;	
 }
 
-function strip_bracket_contents($string) {
-	$brackets[] = array('left' => '[', 'right' => ']');
-	$brackets[] = array('left' => '{', 'right' => '}');
-	$brackets[] = array('left' => '<', 'right' => '>');
-	$brackets[] = array('left' => '(', 'right' => ')');
-	foreach($brackets as $bracket) {
-		$filtering = false;
-		for ($i = 0; $i < strlen($string); $i++) {
-			if ($filtering) {
-				if ($string[$i] == $bracket[right])
-					$filtering = false;
-				$string[$i] = ' ';
-			} else if ($string[$i] == $bracket[left]) {
-				$filtering = true;
-				$string[$i] = ' ';
-			}
-		}
-	}
-	return $string;
-}
-
-function strip_trailing_acronym($string) {
-	$parts = explode(' ', $string);
-	if (count($parts) < 3)
-		return $string;
-	$end = array_pop($parts);
-	foreach($parts as $part) {
-		if ($part[0] != $end[$i++])
-			return $string;
-	}
-	$string = trim(implode(' ', $parts));
-	return $string;
-	
-}
-
-function strip_trailing_parenthesis($string) {
-	$pos = strpos($string, '(');
-	if ($pos !== false)
-		$string = trim(substr($string, 0, $pos));
-	return $string;
-}
 
 
 }

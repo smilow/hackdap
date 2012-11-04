@@ -111,3 +111,6 @@
 		</div>	
 	
 </footer>
+<?
+$this->javascript();
+echo('</body></html gen="'.date('Y-m-d H:i:s').'">');

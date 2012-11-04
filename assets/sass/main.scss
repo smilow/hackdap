@@ -1,7 +1,43 @@
 // Quickstart main.scss
 // --------------------------------------------------
-
 @import "variables";
+
+@font-face{  
+  font-family:TradeGothic;  
+  src: url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd.eot); /* IE */  
+  src:local("TradeGothicLTStd"), url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd.otf) format("truetype");  
+} 
+
+@font-face{  
+  font-family:TradeGothicBold; 
+  src: url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd-Bold.eot);
+  src:local("TradeGothicLTStd-Bold"), url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd-Bold.otf) format("truetype");  
+} 
+
+@font-face{  
+  font-family:TradeGothicThin;
+  src: url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd-Light.eot);
+  src:local("TradeGothicLTStd-Light"), url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd-Light.otf) format("truetype");  
+} 
+
+@font-face{  
+  font-family:TradeGothicBoldCond20;  
+  src: url(http://www.disasteraccountability.org/assets/fonts/tradegothicltstd-bdcn20-webfont.eot);
+  src:local("TradeGothicLTStd-BdCn20"), url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd-BdCn20.otf) format("truetype");  
+} 
+
+@font-face{  
+  font-family:TradeGothicBoldTwo; 
+  src: url(http://www.disasteraccountability.org/assets/fonts/tradegothicltstd-bd2-webfont.eot);
+  src:local("TradeGothicLTStd-Bd2"), url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd-Bd2.otf) format("truetype");  
+} 
+
+@font-face{  
+  font-family:TradeGothicCond18;
+  src: url(http://www.disasteraccountability.org/assets/fonts/tradegothicltstd-cn18-webfont.eot);
+  src:local("TradeGothicLTStd-Cn18.otf"), url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd-Cn18.otf) format("truetype");  
+} 
+
 
 
 body { 
@@ -16,6 +52,11 @@ body {
 	position:relative;
 }
 
+a { 
+	color:$linkColor;
+	&:hover { color:$linkColorHover; }
+}
+ 
 // ------------------------------
 // HEADER
 // ------------------------------
@@ -24,7 +65,7 @@ header {
 	color:#fff;
 	display:block;
 	border-bottom: 1px solid white;
-	padding-top:20px;
+	padding-top:30px;
 	min-height:65px;
 	.pageTitle { 
 		font-family: arial,helvetica,sans-serif;
@@ -50,13 +91,12 @@ h3 {
 	}
 }
 
-ul.inline-list li { 
-	float:left;
-	margin-right:10px;
-}
-
-#quickNav a, a.button, a.button:visited, a.button:hover, a.button span, #mainNav li:hover a, #mainNav li:hover a:visited, #mainNav li:hover a:hover, #mainNav li:hover a span, #mainNav li:hover span.arrow, #mainNav li.on a, #mainNav li.on a:visited, #mainNav li.on a:hover, #mainNav li.on a span, #mainNav li.on span.arrow, .social_bar li a { 
-	//background:transparent url("../img/sprite_button.png") no-repeat scroll right -300px;	
+ul, ol {
+	margin-left:15px;
+	&.inline-list li { 
+		float:left;
+		margin-right:10px;
+	}
 }
 
 #quickNav { 
@@ -91,8 +131,9 @@ nav {
 				color:#fff;
 				text-transform:uppercase;
 				font-weight:bold;
-					font-size:0.9em;
-					font-family: arial,helvetica,sans-serif;
+				font-size:0.9em;
+				font-family: arial,helvetica,sans-serif;
+				&:hover { color:$black; }
 				span { 
 					display:block;
 					height:25px;
@@ -108,7 +149,7 @@ nav {
 	margin-bottom:1px;
 	min-height:40px;
 	ul { margin:0; }
-	a {  font-size:0.9em; }
+	a, a:hover { font-size:0.9em; }
 }
 
 #donate { 
@@ -121,7 +162,7 @@ nav {
 		background-position: right -139px;
 		color:#000;
 		display:block;
-		font-size:1.5em;
+		font-size:1em;
 		font-weight:bold;
 		height:33px;
 		line-height:33px;
@@ -136,12 +177,98 @@ nav {
 	}
 }
 
+
+
+// ------------------------------
+// MAIN CONTENT
+// ------------------------------
+#mainContent { 
+	padding:15px 0 30px;
+	h1 { 
+		text-align:center; 
+		margin-bottom:20px; 
+	}
+}
+
+.table-bordered,
+.table { 
+	border-color:#ccc !important;
+	th { font-size:0.95em; text-transform:uppercase; }
+	td { font-size:0.95em; }
+	th, td { border-color:#ccc !important; max-width:40%; }
+	td:first-child { 
+		font-weight:bold;
+	}
+}
+
+.table-striped tbody tr:nth-child(2n+1) {
+	td, th { 
+		background-color:#ebebeb;
+	}
+}
+
+.sprite-icon { 
+	background-image:url(../img/sprite-icons.png);
+	background-repeat:no-repeat;
+	background-position:0 0;
+	display:inline-block;
+	width:32px;
+	height:32px;
+	&.mental-health { background-position:0 0; }
+	&.jobs-work-programs { background-position:-32px 0; }
+	&.long-term-housing { background-position:-64px 0; }
+	&.infrastructure-development { background-position:0 -32px; }
+	&.shelter { background-position:-32px -32px; }
+	&.water-and-sanitation { background-position:-32px -64px; }
+	&.food { background-position:-64px 0; }
+	&.health-medical { background-position:-64px -32px; }
+	&.mass-care { }
+	&.long-term-recovery { }
+}
+
+
+
+// DISASTER PAGE
+// ------------------------------
+.disaster_overview { 
+	margin:30px 0 10px;
+	.span2 { text-align:right; 
+		.btn { padding:10px 30px;}
+	}
+	.span3, .span4 { text-align:center; }
+}
+#money-spent,
+#boots-on-ground,
+#services { 
+	text-transform:uppercase;
+	font-weight:bold; 
+	text-align: center;
+}
+#money-spent,
+#boots-on-ground { 
+	.number { 
+		font-size:2.5em;
+		color:$linkColor; //#1E9A99; //#558300;
+		margin:20px 0;
+	}
+}
+#boots-on-ground { 
+	.number { 
+		background:url(../img/icon-man-count.png) no-repeat scroll 36% top;
+		margin-top:13px;
+		padding-top:8px;
+		padding-left:57px;
+		height:50px;
+	}
+}
+
+
 // ------------------------------
 // FOOTER 
 // ------------------------------
 footer { 
 	background-color:$black;
-	padding-top:1em;
+	padding:1em 0;
 	#footer { 
 		h5, ul {
 			font-size:0.85em;
@@ -157,6 +284,7 @@ footer {
 		margin:0; 
 		li { 
 			list-style: none;
+			line-height: 1.3em;
 		}
 	}
 }
@@ -168,12 +296,12 @@ footer {
 		margin:0 5px;
 		position: relative;
 		&.one-half { 
-			width:126px;
+			width:132px;
 		}
 		&.two { 
 			width:170px;
-			&.social { width:144px; }
-			&.mailingList { width:196px; }
+			&.social { width:190px; }
+			&.mailingList { width:230px; margin:0 15px 0 10px; }
 		}
 		&.four { 
 			width:350px;
@@ -184,25 +312,32 @@ footer {
 #command {
 	input.textField { 
 		height:14px;
+		width:178px;
 	}
 	label.textField { 
 		font-size:0.8em;
+		line-height:1.25em;
 		color:#fff;
 	}
 }
 #connect-DAP { 
 	border-bottom:1px solid #000;
+	margin-left:0;
 	.column div {
 		border-right:1px solid #515151;
 		height:110px;
 		padding-top: 5px;
 	}
-	#report_issue.column div {
-		border:none;
+	#report_issue {
+		&.column div {
+			border:none;
+		}
+		p { font-size: 1em; }
 	}
 }
 #additional_links { 
 	border-top:1px solid #444;
+	margin-left:0;
 }
 
 

@@ -1,6 +1,7 @@
 <?
 
-$this->javascript[] = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js';
+$this->javascript[] = 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js';
+$this->javascript[] = 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js';
 $this->css[] = '/dcweek/assets/css/bootstrap.min.css';
 $this->css[] = '/dcweek/assets/css/backgrounds_color.css';
 $this->css[] = '/dcweek/assets/css/main.css';
@@ -15,7 +16,7 @@ echo('</head><body><noscript>'.SITE_NAME.' works best with javascript and cookie
 <header>
 <div class="container">
 <div id="logo">
-<p class="pageTitle"><a href="/"><span>Disaster</span> Accountability Project</a></p>
+<p class="pageTitle"><a href="/"><span>SmartResponse</span>.org</a></p>
 <ul class="inline-list" id="quickNav">
 <li><a href="/" class="earthquakes">earthquakes</a></li>
 <li><a href="/" class="tsunamis">tsunamis</a></li>
@@ -24,7 +25,7 @@ echo('</head><body><noscript>'.SITE_NAME.' works best with javascript and cookie
 </ul>
 </div>
 <div id="donate">
-<a href="get-involved/donate.html" class="button"><span>Make a donation</span></a>
+<a href="get-involved/donate.html" class="button"><span>Make a Donation</span></a>
 </div>
 </div>
 </header>

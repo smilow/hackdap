@@ -10,8 +10,12 @@ if (is_numeric($_GET['organization_id'])) {
 if (is_numeric($_GET['organization_id'])) {
 	$page->disaster = disaster::load_by_id($_GET['disaster_id']);
 }
+
 if (is_numeric($page->organization->id) && is_numeric($page->disaster->id)) {
-	$page->render('tpl.disaster-organization.php');
+	$row = $db->fetch_row("select * from disasters_organizations where disaster_id = '".addslashes($page->disaster->id)."' and organization_id = '".addslashes($page->organization->id)."'");
+	$page->relief = new container($row);
+	if (is_numeric($page->relief->id))
+		$page->render('tpl.disaster-organization.php');
 }
 
 die('unhandled fatal error in '.__FILE__.'@'.__LINE__.': invalid disaster_id or organization_id');

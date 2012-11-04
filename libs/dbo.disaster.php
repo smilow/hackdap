@@ -29,10 +29,18 @@ class disaster extends dbo {
 	function get_type() {
 		return 'disaster';
 	}
+	
+	function get_disaster_names() {
+		global $db;
+		return $db->fetch_list("select distinct trim(name_disaster) from disasters where trim(name_disaster) != '' order by name_disaster asc");
+	}
 
 	function load_by_id($id) {
-		$disaster = disaster::load_by_query("select * from disasters where id = '".addslashes($id)."' limit 1");;
-		return $disaster;
+		return self::load_by_query("select * from disasters where id = '".addslashes($id)."' limit 1");;
+	}
+	
+	function load_by_name($name) {
+		return self::load_by_query("select * from disasters where name_disaster = '".addslashes($name)."' limit 1");
 	}
 	
 	function get_services() {
@@ -62,27 +70,35 @@ class disaster extends dbo {
 		return $this->total_people;
 	}
 	
+	function extract_total_money($money_entries) {
+		/* dataset for money has a ton of extra commentary in it... just pull the fiscals and sum that */
+		$total_cash = 0;
+		foreach($money_entries as $money) {
+			$parts = explode(' ', $money);
+			foreach($parts as $part) {
+				if (strpos($part, '$') !== false) {
+					$cash = str_replace(array('$', ','), '', $part);
+					$total_cash += $cash;
+					break;
+				}
+			}
+			if ((count($parts) == 1) && (strpos($money, '$') === false) && is_numeric(cleaner::strip_to_chars($money, '0123456789.'))) {
+				$total_cash += cleaner::strip_to_chars($money, '0123456789.');
+			}
+		}
+		return $total_cash;
+	}
+	
 	function get_money_spent() {
 		if (!isset($this->spent)) {
 			global $db;
 			$money_entries = $db->fetch_list("select money_spent from disasters_organizations where disaster_id = '".addslashes($this->id)."'");
-			$total_cash = 0;
-			foreach($money_entries as $money) {
-				$parts = explode(' ', $money);
-				foreach($parts as $part) {
-					if (strpos($part, '$') !== false) {
-						$cash = str_replace(array('$', ','), '', $part);
-						$total_cash += $cash;
-						break;
-					}
-				}
-			}
-			$this->spent = $total_cash;
+			$this->spent = self::extract_total_money($money_entries);
 		}
 		return $this->spent;
 	}
 	
-	function get_burn_rate($disaster_id) {
+	function get_burn_rate() {
 		if ($this->get_money_raised() == 0)
 			return 0;
 		return round($this->get_money_spent()/$this->get_money_raised(), 2)*100;
@@ -92,22 +108,28 @@ class disaster extends dbo {
 		if (!isset($this->raised)) {
 			global $db;
 			$money_entries = $db->fetch_list("select money_raised from disasters_organizations where disaster_id = '".addslashes($this->id)."'");
-			$total_cash = 0;
-			foreach($money_entries as $money) {
-				$parts = explode(' ', $money);
-				foreach($parts as $part) {
-					if (strpos($part, '$') !== false) {
-						$cash = str_replace(array('$', ','), '', $part);
-						$total_cash += $cash;
-						break;
-					}
-				}
-			}
-			$this->raised = $total_cash;
+			$this->raised = self::extract_total_money($money_entries);
 			if ($this->raised < $this->get_money_spent()) {
 				$this->raised = $this->get_money_spent();
 			}
 		}
 		return $this->raised;
+	}
+	
+	function insert() {
+		global $db;
+		$this->id = $db->query("insert into disasters values (''
+			, '".addslashes($this->name_disaster)."'
+			, '".addslashes($this->summary_disaster)."'
+			, '".addslashes($this->geo_lat_disaster)."'
+			, '".addslashes($this->geo_lng_disaster)."'
+			, '".addslashes($this->icon_disaster)."'
+			, '".addslashes($this->messg_brd_disaster)."'
+			, now()
+		)");
+		if ($this->id < 1) {
+			$this->id = $db->insert_id();
+			die('HAD TO INSERT');
+		}
 	}
 }

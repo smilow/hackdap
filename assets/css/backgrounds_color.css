@@ -1,42 +1,42 @@
 @font-face{  
   font-family:TradeGothic;  
-  src: url(../fonts/TradeGothicLTStd.eot); /* IE */  
-  src:local("TradeGothicLTStd"), url(../fonts/TradeGothicLTStd.otf) format("truetype");  
+  src: url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd.eot); /* IE */  
+  src:local("TradeGothicLTStd"), url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd.otf) format("truetype");  
 } 
 
 @font-face{  
   font-family:TradeGothicBold; 
-  src: url(../fonts/TradeGothicLTStd-Bold.eot);
-  src:local("TradeGothicLTStd-Bold"), url(../fonts/TradeGothicLTStd-Bold.otf) format("truetype");  
+  src: url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd-Bold.eot);
+  src:local("TradeGothicLTStd-Bold"), url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd-Bold.otf) format("truetype");  
 } 
 
 @font-face{  
   font-family:TradeGothicThin;
-  src: url(../fonts/TradeGothicLTStd-Light.eot);
-  src:local("TradeGothicLTStd-Light"), url(../fonts/TradeGothicLTStd-Light.otf) format("truetype");  
+  src: url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd-Light.eot);
+  src:local("TradeGothicLTStd-Light"), url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd-Light.otf) format("truetype");  
 } 
 
 @font-face{  
   font-family:TradeGothicBoldCond20;  
-  src: url(../fonts/tradegothicltstd-bdcn20-webfont.eot);
-  src:local("TradeGothicLTStd-BdCn20"), url(../fonts/TradeGothicLTStd-BdCn20.otf) format("truetype");  
+  src: url(http://www.disasteraccountability.org/assets/fonts/tradegothicltstd-bdcn20-webfont.eot);
+  src:local("TradeGothicLTStd-BdCn20"), url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd-BdCn20.otf) format("truetype");  
 } 
 
 @font-face{  
   font-family:TradeGothicBoldTwo; 
-  src: url(../fonts/tradegothicltstd-bd2-webfont.eot);
-  src:local("TradeGothicLTStd-Bd2"), url(../fonts/TradeGothicLTStd-Bd2.otf) format("truetype");  
+  src: url(http://www.disasteraccountability.org/assets/fonts/tradegothicltstd-bd2-webfont.eot);
+  src:local("TradeGothicLTStd-Bd2"), url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd-Bd2.otf) format("truetype");  
 } 
 
 @font-face{  
   font-family:TradeGothicCond18;
-  src: url(../fonts/tradegothicltstd-cn18-webfont.eot);
-  src:local("TradeGothicLTStd-Cn18.otf"), url(../fonts/TradeGothicLTStd-Cn18.otf) format("truetype");  
+  src: url(http://www.disasteraccountability.org/assets/fonts/tradegothicltstd-cn18-webfont.eot);
+  src:local("TradeGothicLTStd-Cn18.otf"), url(http://www.disasteraccountability.org/assets/fonts/TradeGothicLTStd-Cn18.otf) format("truetype");  
 } 
 
 body{
 	background-color:#ffffff;
-	background-image:url(../img/bkgds/body.png);
+	background-image:url(../img/body.png);
 	background-repeat:repeat-x;
 	background-position:left bottom;
 	color:#ffffff;
