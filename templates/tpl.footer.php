@@ -102,11 +102,6 @@
 						</ul>
 					</div>
 				</div>
-				<div class="column one-half blog">
-					<div>
-						<h5><a href="/blog2/">Read our blog</a></h5>
-					</div>
-				</div>
 			</div>
 		</div>	
 	

@@ -6,9 +6,9 @@ class organization extends dbo {
 	}
 	
 	function get_website() {
-		if ((strpos($this->website, 'http://') === 0) || (strpos($this->website, 'https://') === 0) || ($this->website != '')) 
-			return $this->website;
-		return 'http://'.$this->website;
+		if ((strpos($this->website_organization, 'http://') === 0) || (strpos($this->website_organization, 'https://') === 0) || ($this->website_organization != '')) 
+			return $this->website_organization;
+		return 'http://'.$this->website_organization;
 	}
 	
 	function get_organization_path() {

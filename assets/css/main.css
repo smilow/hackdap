@@ -417,11 +417,32 @@ footer {
   padding: 1em 0;
 }
 footer #footer h5, footer #footer ul {
-  font-size: 0.85em;
+  font-size: 0.75em;
+}
+footer #footer ul{
+	  border-top: 1px solid #444;
+	  padding-top: 18px;
+}
+footer #footer h5{
+	  border-bottom: 1px solid #000;
+	  margin-bottom: 0;
+	  padding-bottom: 10px;
+	  padding-top: 6px;
 }
 footer #footer .social_bar li {
   font-size: 0.8em;
   margin-bottom: 4px;
+}
+footer #footer ul.social_bar{
+	border: 0;
+	padding-top: 0;
+}
+footer h3.teaser{
+	font-weight: normal;
+	font-size: 2em;
+}
+footer .mailingList label{
+	line-height: 1em;
 }
 footer ul {
   margin: 0;
@@ -429,6 +450,9 @@ footer ul {
 footer ul li {
   list-style: none;
   line-height: 1.3em;
+}
+footer #footer h5 a{
+	color:#17C2FF !important;
 }
 
 .row .column {
@@ -438,7 +462,12 @@ footer ul li {
   position: relative;
 }
 .row .column.one-half {
-  width: 132px;
+  width: 156px;
+}
+
+.row .column.one-half.aboutUs {
+  width: 165px;
+  margin-right: 0;
 }
 .row .column.two {
   width: 170px;

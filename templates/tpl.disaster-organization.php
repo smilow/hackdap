@@ -89,16 +89,22 @@ echo('
 						<p>'.$this->organization->mission_organization.'</p>
 					</div>
 					<div class="organization_contact_info">
-						<b>HQ Contact Information:</b>
-						<address>
-							<span class="street">123 Street Name</span>
-							<span class="city">City</span>, <span class="state">State</span> <span class="zip">20007</span>
-							<span class="phone">Phone: 555-555-5555</span>
-							<span class="email">Email: <a href="#">contact@organization.org</a></span>
-						</address>
-						<span class="website"><a href="#">www.organization.org</a></span>
-						<span class="twitter">Follow us on Twitter <a href="#">@organization</a></span>
-						<span class="overall-annual-budget">Overall Annual Budget: <b>$50,000.00</b></span>
+');
+if (($this->organization->email_organization != '') || ($this->organization->phone_no_organization > 0) || (strlen($this->organization->get_website() > 8))) {
+	echo('
+							<b>HQ Contact Information:</b>
+							<address>
+								'.($this->organization->contact_street_add != '' ? '<span class="street">'.$this->organization->contact_street_add.' '.$this->organization->contact_street_add_other.'</span>' : '').'
+								'.($this->organization->contact_city != '' ? '<span class="city">'.$this->organization->contact_city.'</span>, <span class="zip">'.$this->organization->contact_zip.'</span>' : '').'
+								'.($this->organization->phone_no_organization > 0 ? '<span class="phone">Phone: '.$this->organization->phone_no_organization.'</span>' : '').'
+								'.($this->organization->email_organization != '' ? '<span class="email">Email: <a href="mailto:'.$this->organization->email_organization.'">'.$this->organization->email_organization.'</a></span>' : '').'
+							</address>
+							<span class="website"><a href="'.$this->organization->get_website().'" rel="nofollow">'.$this->organization->get_website().'</a></span>
+	');
+}
+//	<!--						<span class="twitter">Follow us on Twitter <a href="#">@organization</a></span>-->
+echo('
+						'.($this->organization->annual_budget_organization != '' ? '<span class="overall-annual-budget">Overall Annual Budget: <b>'.$this->organization->annual_budget_organization.'</b></span>' : '').'
 					</div>
 				</div>
 			</div>
