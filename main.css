@@ -38,7 +38,7 @@
 body {
   background-color: #f8f8f8;
   color: #333333;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
 
@@ -60,7 +60,7 @@ header {
   display: block;
   border-bottom: 1px solid white;
   padding-top: 30px;
-  min-height: 60px;
+  min-height: 65px;
 }
 header .pageTitle {
   font-family: arial,helvetica,sans-serif;
@@ -163,10 +163,10 @@ nav ul li {
   float: right;
   position: absolute;
   right: 0;
-  top: -5px;
+  top: 0;
 }
 #donate a.button, #donate a.button:visited, #donate a.button:hover {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-position: right -139px;
   color: #000;
   display: block;
@@ -182,14 +182,12 @@ nav ul li {
   background-position: left -106px;
   display: block;
   padding-left: 10px;
-  padding-top: 3px;
 }
 
 #mainContent {
-  padding: 25px 0 30px;
+  padding: 15px 0 30px;
 }
 #mainContent h1 {
-  font-size:3.25em;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -245,25 +243,18 @@ nav ul li {
 .sprite-icon.shelter {
   background-position: -32px -32px;
 }
-.sprite-icon.water,
-.sprite-icon.water-sanitation {
-  background-position: -64px -32px;
+.sprite-icon.water {
+  background-position: -32px -64px;
 }
 .sprite-icon.food {
   background-position: 0 -64px;
 }
 .sprite-icon.health-medical {
-  background-position: -64px -64px;
-}
-.sprite-icon.mass-care {
   background-position: -32px -64px;
-}
-.sprite-icon.long-term-recovery {
-  background-position: 0px -100px;
 }
 
 .disaster_overview {
-  margin: 40px 0;
+  margin: 30px 0 10px;
 }
 .disaster_overview .span2 {
   text-align: right;
@@ -285,26 +276,19 @@ nav ul li {
   text-align: center;
 }
 
-.donate .btn {
-  padding: 11px 50px;
-}
-
 #money-spent .number,
-#money-raised .number,
-#burn-rate .number {
-  font-size: 2em;
+#boots-on-ground .number {
+  font-size: 2.5em;
   color: #079ab8;
-  margin: 10px 0 20px;
+  margin: 20px 0;
 }
 
 #boots-on-ground .number {
-  background: url(../img/icon-man-count.png) no-repeat scroll 30% top;
-  margin-top: 55px;
+  background: url(../img/icon-man-count.png) no-repeat scroll 36% top;
+  margin-top: 13px;
   padding-top: 8px;
-  padding-left: 65px;
+  padding-left: 57px;
   height: 50px;
-  color: #079ab8;
-  font-size: 4em;
 }
 
 #services .service-items {
@@ -314,7 +298,7 @@ nav ul li {
   text-align: left;
   width: 33%;
   float: left;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 #services .service-items i {
   float: left;
@@ -328,88 +312,6 @@ nav ul li {
 #services b {
   display: block;
   clear: both;
-  margin-bottom: 10px;
-}
-
-#organization-stats h4,
-#organization-background h4 { 
-	background-color:#262626;
-	color:#FFF117;
-	padding:10px;
-	font-weight: normal;
-}
-
-#organization-background .organization_summary {
-	margin-bottom:15px;
-}
-
-#organization-stats ul {
-  margin-left: 0;
-  list-style: none;
-}
-#organization-stats li { 
-	color:#666;
-	line-height:28px;
-}
-#organization-stats ul li span {
-  font-weight: bold;
-  margin-left: 10px;
-  color:#333;
-}
-#organization-stats .partner-org ul {
-	margin:0 0 15px 15px;
-}
-#organization-stats .partner-org li { 
-	line-height:20px;
-}
-.organization_contact_info { 
-	margin:15px 0;
-}
-.organization_contact_info address { 
-	display:block;
-	margin: 5px 0 10px;
-}
-.organization_contact_info address .city,
-.organization_contact_info address .state,
-.organization_contact_info address .zip { 
-	display:inline;
-}
-.organization_contact_info span { 
-	display:block;
-}
-
-.relief-submission-form td:first-child { 
-	font-weight:bold;
-	text-align:right;
-	padding-right:10px;
-	width:200px;
-	padding-top:9px;
-	vertical-align:top;
-}
-.relief-submission-form td input { 
-	width:472px;
-}
-.relief-submission-form .boot-type { 
-	width:300px;
-}
-.relief-submission-form .boot-count {
-	width:150px;
-	margin-left:5px;
-}
-.relief-submission-form .btn { 
-	padding:11px 50px;
-	width:auto;
-}
-
-.ui-autocomplete.ui-menu {
-	max-height:400px;
-	overflow: scroll;
-}
-.ui-autocomplete.ui-menu .ui-state-hover,
-.ui-autocomplete.ui-menu .ui-state-focus { 
-	background-image:none;
-	background-color:#ddd;
-	border:none;
 }
 
 footer {
@@ -491,4 +393,32 @@ footer ul li {
 
 .border-none {
   border: none !important;
+}
+
+.show-grid {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.show-grid [class*="span"] {
+  background-color: #eee;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  min-height: 30px;
+  line-height: 30px;
+}
+
+.show-grid:hover [class*="span"] {
+  background: #ddd;
+}
+
+.show-grid .show-grid {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.show-grid .show-grid [class*="span"] {
+  background-color: #ccc;
 }
