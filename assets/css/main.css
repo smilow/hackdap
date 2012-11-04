@@ -43,7 +43,7 @@ body {
 }
 
 .landing-page { 
-	background:url(../img/bg.jpg) center 65%;
+	background:url(../img/bg.jpg) center 72%;
 	height:600px;
 	position:relative;
 }
@@ -71,6 +71,45 @@ body {
 	margin-top:10px;
 	width:100%;
 }
+.donate-wrapper { 
+	margin-top:20px;
+}
+.donate-wrapper div { 
+	text-align: center;
+	margin:0 auto;
+}
+.crProjectWidget { 
+	width:50% !important;
+}
+.crProjectWidget h5 {
+	text-align: center !important;
+}
+#crThermContainer #thermometer { 
+	width:300px;
+}
+.crProjectInfo .crDonated { 
+	font-size:35px;
+	color:#17C2FF !important;
+}
+.crMore { 
+	color:#17C2FF !important;
+}
+.crProjectWidget .gradientButton { 
+	background:#17C2FF !important;
+}
+.crProjectWidget .gradientButton .donateNow { 
+	color:#000 !important;
+	font-weight:bold !important;
+	border-radius:5px;
+}
+#mercury  {
+	background-color:#333 !important;
+}
+.crProjectWidget{ 
+	border-color:#fff !important;
+	box-shadow: 0 1px 2px #666666;	
+}
+
 .container {
   width: 1000px;
   position: relative;
@@ -93,7 +132,7 @@ header {
 }
 header .pageTitle {
   font-family: arial,helvetica,sans-serif;
-  font-size: 2.5em;
+  font-size: 3em;
   color: #fff;
   float: left;
   margin-right: 15px;
@@ -516,9 +555,10 @@ footer #footer h5 a{
   width: 178px;
 }
 #command label.textField {
-  font-size: 0.8em;
+  font-size: 1em;
   line-height: 1.25em;
   color: #fff;
+  padding-top:5px;
 }
 
 #connect-DAP {
